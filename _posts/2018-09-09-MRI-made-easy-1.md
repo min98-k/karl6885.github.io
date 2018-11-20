@@ -81,7 +81,7 @@ proton들이 각자 magnetic field를 가지고 있기 때문에, 어찌 보면 
 
 Proton들이 외부 자기장의 방향에 따라 나란히 있게 된다고 서술하긴 했지만, 사실 그냥 가만히 있는 것은 아니다. Proton들은 그 방향으로 정렬이 되어 있는 한편 마치 팽이처럼 빙빙 도는 움직임을 보인다. 이 움직임을 **Precession**이라 한다. 
 
-![](../assets/images/posts/MRI_made_easy/MRI_made_easy_001.png)
+![](https://github.com/karl6885/karl6885.github.io/blob/master/assets/images/posts/MRI_made_easy/MRI_made_easy_001.png?raw=true)
 
 이 precession의 회전 주기는 magnetic field의 세기에 비례한다. 이것을 측정하는 **Larmor equation**이 존재한다.
 
@@ -105,11 +105,11 @@ W는 precession의 주기(단위는 Hz 또는 MHz), B는 외부 자기장의 세
 
 앞으로의 설명을 좀 더 편하게 하기 위해, 좌표계를 쓰기로 한다.(매번 proton과 자석 하나하나를 다 그릴 수 없으니..)사실 proton은 direction과 magnitude를 모두 가지고 있으니 vector로 표현하기 더 편하다. *이제부터 proton들은 화살표로 표현한다.*
 
-![](../assets/images/posts/MRI_made_easy/MRI_made_easy_002.png)
+![](https://github.com/karl6885/karl6885.github.io/blob/master/assets/images/posts/MRI_made_easy/MRI_made_easy_002.png?raw=true)
 
 그럼 이렇게 좌표계로 표현하게 될 때, 실제 사람의 몸에서는 어떤 식으로 각 자기력의 힘이 분포하고 있을까? 그건 다음 사진과 같다.
 
-![](../assets/images/posts/MRI_made_easy/MRI_made_easy_003.png)
+![](https://github.com/karl6885/karl6885.github.io/blob/master/assets/images/posts/MRI_made_easy/MRI_made_easy_003.png?raw=true)
 
 왼쪽 사진을 보면 위에서 얘기했듯 proton들이 외부 자기장에 나란히 혹은 반대로 정렬된다. z축이 외부 자기장의 방향이라고 생각하면 된다. 그러면 조금 더 많은  magnetic force가 외부 자기장의 방향에 있다는 것을 알 수 있다. 그도 그럴것이 자연스럽게 외부 자기장에 편승하는 것보다 그 반대쪽 방향을 향해 있는 것이 더 에너지가 많이 필요하기 때문이다.(기억 안 나면 위에 가서 다시 보고 오자) 
 
