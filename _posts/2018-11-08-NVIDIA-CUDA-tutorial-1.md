@@ -20,7 +20,7 @@ NVIDIA 사의 공식 튜토리얼 `Fundamentals of Accelerated Computing C/C++`�
 
 ### GPU-accelerated Vs. CPU-only Applications
 
-<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTdUbQjoEYAtcPCMX4ZVLa9gE0rbO3ODClJqgtzRaXoFgVmTJrOkXGDAYmA0BsuTEaokTASv84JsKLm/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="550" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTdUbQjoEYAtcPCMX4ZVLa9gE0rbO3ODClJqgtzRaXoFgVmTJrOkXGDAYmA0BsuTEaokTASv84JsKLm/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 
 
