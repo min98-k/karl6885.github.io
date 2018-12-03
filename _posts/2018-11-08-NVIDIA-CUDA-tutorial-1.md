@@ -20,7 +20,7 @@ NVIDIA 사의 공식 튜토리얼 `Fundamentals of Accelerated Computing C/C++`�
 
 ### GPU-accelerated Vs. CPU-only Applications
 
-<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTdUbQjoEYAtcPCMX4ZVLa9gE0rbO3ODClJqgtzRaXoFgVmTJrOkXGDAYmA0BsuTEaokTASv84JsKLm/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTdUbQjoEYAtcPCMX4ZVLa9gE0rbO3ODClJqgtzRaXoFgVmTJrOkXGDAYmA0BsuTEaokTASv84JsKLm/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 
 
@@ -81,7 +81,7 @@ int main()
 
 ### CUDA Thread Hierarchy
 
-<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQYti_rVyWNNOccK6Slxd1VqazuqO5IhP17tmk-yTZAQfPEVpF14aZF9Vo3XkrDbFetNLTm_Pnk7JvD/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="550" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQYti_rVyWNNOccK6Slxd1VqazuqO5IhP17tmk-yTZAQfPEVpF14aZF9Vo3XkrDbFetNLTm_Pnk7JvD/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 CUDA Thread Hierarchy에서의 용어 좀 더 자세히 설명
 
@@ -94,7 +94,7 @@ CUDA Thread Hierarchy에서의 용어 좀 더 자세히 설명
 
 ### CUDA-Provided Thread Hierarchy Variables
 
-<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSVS21bI-cje3Cqtxke-LHcvxk1ZxvZF-F35bgHSKfvNsvkGklCeqwlXHCDPJey5meZ1vTVYMqiF0UV/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="550" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSVS21bI-cje3Cqtxke-LHcvxk1ZxvZF-F35bgHSKfvNsvkGklCeqwlXHCDPJey5meZ1vTVYMqiF0UV/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 CUDA Thread Hierarchy에서는 미리 정해진 변수를 통해 각 `block`과 `thread`에 접근할 수 있다.
 
@@ -186,7 +186,7 @@ int main()
 
 ### Coordinating Parallel Threads
 
-<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSfi8LAinJ1RqTzlB2vRsAcDzCCk9gZov5rQODN5rtRMPt57UizCVv5LSVZ5WLxGtrsMm7FIkLb0wMR/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="550" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSfi8LAinJ1RqTzlB2vRsAcDzCCk9gZov5rQODN5rtRMPt57UizCVv5LSVZ5WLxGtrsMm7FIkLb0wMR/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 각 `block`에 존재할 수 있는 `thread`의 개수는 최대 1024개로 한계가 있다. 따라서 병렬처리의 효과를 더 크게 누리기 위해서는 여러 `block`들 간의 coordinate를 잘 해야 한다.
 
@@ -568,7 +568,7 @@ int main()
 
 ### Grid-Stride Loops
 
-<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSfcPagyv7ObRnhygFnKrvDIDa-wUuc3yR-qs7xd4gQxProMOqXzNqe8y9vz711cLIbPp1qYJc7R3l/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="550" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSfcPagyv7ObRnhygFnKrvDIDa-wUuc3yR-qs7xd4gQxProMOqXzNqe8y9vz711cLIbPp1qYJc7R3l/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 이번에는 데이터의 개수가 `grid` 내에 존재하는 `thread`의 개수보다 많은 경우이다. 이 경우 남은 데이터들을 처리해줄 수 없기 때문에 `grid-stride loops`라는 방법을 사용한다. 
 
