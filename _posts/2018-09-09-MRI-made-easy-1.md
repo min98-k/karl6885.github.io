@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "MRI 쉽게 이해하기 (1) 개요"
-date: 2018-11-21
+date: 2018-09-09
 categories: Neuroscience
 tags: [MRI, Neuroscience, Medical Imaging, Neuroimaging, MRI made easy, Introduction]
-
 ---
 
 
