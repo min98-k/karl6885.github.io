@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA CUDA 기초 튜토리얼 (1)"
 date: 2018-11-08
-categories: blog
+categories: CUDA
 tags: [tutorial, CUDA, accelerated computing, NVIDIA]
 ---
 
