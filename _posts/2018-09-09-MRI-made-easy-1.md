@@ -84,7 +84,7 @@ Proton들이 외부 자기장의 방향에 따라 나란히 있게 된다고 서
 
 
 $$
-W(Hz) = r(gyro-magnetic ratio)*B(Tesla)
+W = r * B
 $$
 
 

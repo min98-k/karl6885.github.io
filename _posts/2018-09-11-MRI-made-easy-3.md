@@ -222,12 +222,12 @@ MRI imaging sequences에서 TR은 가장 시간을 많이 잡아먹는 존재다
 - 작은 flip angle을 쓰기 때문에 언제나 충분한 longitudinal magnetization이 존재한다. 따라서 이것의 회복을 위한 긴 TR을 쓰지 않아도 된다.
 - 쏘는 데 시간이 좀 걸리는 180° pulse를 쓰지 않는다.
 
-## Fast imgaing time
+## Fast imaging time
 
 Fast imaging sequences보다 짧게 이미징 시간을 줄일 수 있는 방법은 없을까? 대체 무엇이 이미징 시간을 결정하는 걸까? 일반적인 이미징 시간은 다음과 같이 구할 수 있다.
-
-> acquisition time = TR x N x N_ex
-
+$$
+acquisition\ time = TR * N * N_{ex}
+$$
 N은 찍는 사진의 수이고, N_ex는 하나의 사진을 완성시킬 때까지 필요한 여러 번의 촬영 횟수이다. 사실 fast imaging에서 나오는 신호는 다소 작다. 따라서 좋은 퀄리티의 사진을 위해 여러 번 사진을 찍고 그것의 평균을 구하는 것이 좋다. 결국, 우리가 원하는 것은 신호 대비 노이즈가 적은 사진이다.
 
 ## Multi-slice imaging(Long TR)
