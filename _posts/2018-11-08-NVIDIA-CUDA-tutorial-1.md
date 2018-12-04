@@ -8,23 +8,21 @@ tags: [tutorial, CUDA, accelerated computing, NVIDIA]
 
 
 
-# NVIDIA CUDA 기초 튜토리얼 (1)
-
 NVIDIA 사의 공식 튜토리얼 `Fundamentals of Accelerated Computing C/C++`을 학습하며 정리한 내용.
 
 
 
-## Accelerating Applications with CUDA C/C++
+# Accelerating Applications with CUDA C/C++
 
 
 
-### GPU-accelerated Vs. CPU-only Applications
+## GPU-accelerated Vs. CPU-only Applications
 
 <div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTdUbQjoEYAtcPCMX4ZVLa9gE0rbO3ODClJqgtzRaXoFgVmTJrOkXGDAYmA0BsuTEaokTASv84JsKLm/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
 
 
-### Writing Application Code for the GPU
+## Writing Application Code for the GPU
 
 ```cpp
 void CPUFunction()
@@ -65,7 +63,7 @@ int main()
 
 
 
-### Compiling and Running Accelerated CUDA Code
+## Compiling and Running Accelerated CUDA Code
 
 `.c` 파일을 `gcc`로 컴파일하는 것처럼, `.cu` 파일은 `nvcc`라는 [**NVIDIA CUDA Compiler**](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html)로 컴파일한다. 다음과 같이 쓸 수 있다.
 
@@ -79,7 +77,7 @@ int main()
 
 
 
-### CUDA Thread Hierarchy
+## CUDA Thread Hierarchy
 
 <div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQYti_rVyWNNOccK6Slxd1VqazuqO5IhP17tmk-yTZAQfPEVpF14aZF9Vo3XkrDbFetNLTm_Pnk7JvD/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
@@ -92,7 +90,7 @@ CUDA Thread Hierarchy에서의 용어 좀 더 자세히 설명
 
 
 
-### CUDA-Provided Thread Hierarchy Variables
+## CUDA-Provided Thread Hierarchy Variables
 
 <div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSVS21bI-cje3Cqtxke-LHcvxk1ZxvZF-F35bgHSKfvNsvkGklCeqwlXHCDPJey5meZ1vTVYMqiF0UV/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
@@ -103,13 +101,13 @@ CUDA Thread Hierarchy에서는 미리 정해진 변수를 통해 각 `block`과 
 - `blockDim.x`: `block` 내에 있는 `thread`의 개수. performWork<<<2,4>>>()와 같은 `kernel`의 경우 `4`가 된다. 한 `grid` 내에 있는 모든 `block`은 같은 수의 `thread`를 가진다.
 - `threadIdx.x`: `block` 내에 있는 `thread` 중 해당 `thread`의 위치 인덱스. performWork<<<2,4>>>()와 같은 `kernel`의 경우 `0`,`1`,`2`,`3` 중 하나가 된다.
 
-### Accelerating For Loops
+## Accelerating For Loops
 
 반복문을 가속화하는 법.
 
 
 
-#### Exercise: Accelerating a For Loop with a Single Block of Threads
+### Exercise: Accelerating a For Loop with a Single Block of Threads
 
 ```cpp
 #include <stdio.h>
@@ -184,7 +182,7 @@ int main()
 
 
 
-### Coordinating Parallel Threads
+## Coordinating Parallel Threads
 
 <div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSfi8LAinJ1RqTzlB2vRsAcDzCCk9gZov5rQODN5rtRMPt57UizCVv5LSVZ5WLxGtrsMm7FIkLb0wMR/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
@@ -198,13 +196,13 @@ GPU `thread`에 data를 할당하기 위해, 각 `thread`의 인덱스를 활용
 
 
 
-#### Exercise: Accelerating a For Loop with Multiple Blocks of Threads
+### Exercise: Accelerating a For Loop with Multiple Blocks of Threads
 
 아까 위에서 병렬화 한 반복문을, 이번에는 최소 2개 이상의 `block`을 활용하여 병렬화시켜보자.
 
 
 
-### Allocating Memory to be accessed on the GPU and the CPU
+## Allocating Memory to be accessed on the GPU and the CPU
 
 CPU-only application에서는 C가 `malloc`과 `free`를 사용해 메모리를 할당하고 해제하지만, GPU 가속을 할 때는 대신 `cudaMallocManaged`와 `cudaFree`를 사용한다. 사용 예시는 다음과 같으니 비교해보자.
 
@@ -236,7 +234,7 @@ cudaFree(a);
 
 
 
-#### Exercise: Array Manipulation on both the Host and Device
+### Exercise: Array Manipulation on both the Host and Device
 
 ```c++
 #include <stdio.h>
@@ -387,7 +385,7 @@ int main()
 
 
 
-### Grid Size Work Amount Mismatch
+## Grid Size Work Amount Mismatch
 
 우리가 사용하려는 데이터가 `grid` 사이즈에 딱 맞으면 상관 없지만, 만약 그것보다 부족한 경우 사이즈가 맞지 않는다는 문제가 발생한다. e.g.) `grid` 내에 `thread` 개수가 8개인데 사용할 데이터는 5개밖에 없으면  `threadIdx.x` + `blockIdx.x` * `blockDim.x` 공식으로 할당할 때 5,6,7번은 문제가 생긴다.
 
@@ -418,7 +416,7 @@ some_kernel<<<number_of_blocks, threads_per_block>>>(N);
 
 
 
-#### Exercise: Accelerating a For Loop with a Mismatched Execution Configuration
+### Exercise: Accelerating a For Loop with a Mismatched Execution Configuration
 
 ```c++
 #include <stdio.h>
@@ -566,7 +564,7 @@ int main()
 
 
 
-### Grid-Stride Loops
+## Grid-Stride Loops
 
 <div align="center"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSfcPagyv7ObRnhygFnKrvDIDa-wUuc3yR-qs7xd4gQxProMOqXzNqe8y9vz711cLIbPp1qYJc7R3l/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="430" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 
@@ -576,7 +574,7 @@ int main()
 
 
 
-#### Exercise: Use a Grid-Stride Loop to Manipulate an Array Larger than the Grid
+### Exercise: Use a Grid-Stride Loop to Manipulate an Array Larger than the Grid
 
 ```c++
 #include <stdio.h>
@@ -717,7 +715,7 @@ int main()
 
 
 
-### Error Handling
+## Error Handling
 
 어느 어플리케이션에서나 `Error Handling`은 중요하다. 대부분의 CUDA 함수는 `cudaError_t`라는 자료형으로 결과값을 반환하는데, 이걸 확인하면 에러가 발생했는지 아닌지를 확인할 수 있다. `cudaMallocManaged` 함수의 경우 다음과 같다.
 
@@ -753,7 +751,7 @@ if (err != cudaSuccess)
 
 
 
-#### Exercise: Add Error Handling
+### Exercise: Add Error Handling
 
 ```c++
 #include <stdio.h>
@@ -913,7 +911,7 @@ int main()
 
 
 
-### CUDA Error Handling Function
+## CUDA Error Handling Function
 
 다음은 에러를 확인하기 편하게 해주는 매크로 함수다. 다른 exercise를 풀 때 편하게 사용하면 된다.
 
@@ -944,7 +942,7 @@ int main()
 
 
 
-### 요약
+## 요약
 
 Accelerating Applications with CUDA C/C++에서 배운 내용 요약.
 
@@ -956,7 +954,7 @@ Accelerating Applications with CUDA C/C++에서 배운 내용 요약.
 
 
 
-#### Final Exercise: Accelerate Vector Addition Application
+### Final Exercise: Accelerate Vector Addition Application
 
 ```c++
 #include <stdio.h>
@@ -1113,11 +1111,11 @@ int main()
 
 
 
-### Advanced Content
+## Advanced Content
 
 The following exercises provide additional challenge for those with time and interest. They require the use of more advanced techniques, and provide less scaffolding. They are difficult and excellent for your development.
 
-#### Grids and Blocks of 2 and 3 Dimensions
+### Grids and Blocks of 2 and 3 Dimensions
 
 Grids and blocks can be defined to have up to 3 dimensions. Defining them with multiple dimensions does not impact their performance in any way, but can be very helpful when dealing with data that has multiple dimensions, for example, 2d matrices. To define either grids or blocks with two or 3 dimensions, use CUDA's `dim3` type as such:
 
@@ -1131,7 +1129,7 @@ Given the example just above, the variables `gridDim.x`, `gridDim.y`, `blockDim.
 
 
 
-#### Exercise: Accelerate 2D Matrix Multiply Application
+### Exercise: Accelerate 2D Matrix Multiply Application
 
 The file [`01-matrix-multiply-2d.cu`](http://ec2-18-191-146-97.us-east-2.compute.amazonaws.com/oiOcuiDi/edit/tasks/task1/task/01_AC_CUDA_C/08-matrix-multiply/01-matrix-multiply-2d.cu) contains a host function `matrixMulCPU` which is fully functional. Your task is to build out the `matrixMulGPU`CUDA kernel. The source code will execute the matrix multiplication with both functions, and compare their answers to verify the correctness of the CUDA kernel you will be writing. Use the following guidelines to support your work and refer to [the solution](http://ec2-18-191-146-97.us-east-2.compute.amazonaws.com/oiOcuiDi/edit/tasks/task1/task/01_AC_CUDA_C/08-matrix-multiply/solutions/01-matrix-multiply-2d-solution.cu) if you get stuck:
 
@@ -1316,7 +1314,7 @@ int main()
 
 
 
-#### Exercise: Accelerate A Thermal Conductivity Application
+### Exercise: Accelerate A Thermal Conductivity Application
 
 In the following exercise, you will be accelerating an application that simulates the thermal conduction of silver in 2 dimensional space.
 

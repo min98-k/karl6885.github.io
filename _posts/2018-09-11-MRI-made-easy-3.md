@@ -8,11 +8,11 @@ tags: [MRI, Neuroscience, Medical Imaging, Neuroimaging, MRI made easy, Introduc
 
 
 
-# MRI 쉽게 이해하기 (3) 신호 측정 및 이미지 재구성
+이번 글에서는 환자가 방출하는 신호 중 무슨 신호를 어떻게 찍어야 우리의 내부 조직을 볼 수 있는지, 또 어떻게 그 신호로 이미지를 만들 수 있는지에 대해 알아본다.
 
 
 
-## MRI
+# MRI
 
 MRI의 작동 순서를 정말 간단하게 정리하자면 다음과 같다.
 
@@ -24,17 +24,17 @@ MRI의 작동 순서를 정말 간단하게 정리하자면 다음과 같다.
 
 
 
-이번 글에서는 환자가 방출하는 신호 중 무슨 신호를 어떻게 찍어야 우리의 내부 조직을 볼 수 있는지, 또 어떻게 그 신호로 이미지를 만들 수 있는지에 대해 알아본다.
 
 
 
-## 무슨 신호를 어떻게 측정하는 것인가?
+
+# 무슨 신호를 어떻게 측정하는 것인가?
 
 앞의 글에서는 전자기파를 쐈다가 꺼보면 어떤 현상이 나타나는지 확인할 수 있었다. 그러면 T1, T2 현상이 발생한다는 것은 알겠다. 그렇다면 무슨 신호를 어떻게 찍어야 우리의 내부 조직을 볼 수 있을까?
 
 
 
-### 90° pulse와 FID signal
+## 90° pulse와 FID signal
 
 전자기파를 쏠 때, proton들이 에너지를 흡수하면 일부가 거꾸로 정렬된다고 했다. 그 결과로 longitudinal magnetization이 감소한다. 그렇다면 전자기파 중에 longitudinal magnetization을 0으로 만드는 세기의 파동도 있을 것이다. 그리고 이 때 같은 크기의 transversal magnetization이 생겨난다. 이런 현상을 만드는 세기의 전자기파를 90° pulse라 한다. 마찬가지로 180° pulse도 가능하다. 이것은 조금 뒤에서 다루기로 한다. 
 
@@ -60,13 +60,13 @@ MRI의 작동 순서를 정말 간단하게 정리하자면 다음과 같다.
 
 
 
-### Pulse sequence
+## Pulse sequence
 
 무슨 신호를 받는지까지는 알겠다. 그런데 MRI 이미지를 생각해보면, 조직이 다르면 다르게 찍힌다. 찍는 방법에 따라, 어떤 조직은 잘 나오고 어떤 조직은 잘 안 나온다고 한다. 그렇다면 어떻게 찍어야 하는 걸까?
 
 
 
-#### TR과 T1-weighted image
+### TR과 T1-weighted image
 
 A와 B 조직이 있다고 하자. A가 B에 비해 짧은 T1, T2를 가지고 있다.(복습해보면 B가 더 수분을 많이 가지고 있다고 생각해 볼 수도 있다) 그럼 먼저 90° pulse를 쏴 보고, 일정 시간 뒤에 두번째 90° pulse를 쏴 본다. 무슨 일이 일어날까? 두 90° pulse 사이의 시간 간격이 충분히 길면, A B 조직 모두 longitudinal magnetization을 회복한다. 따라서 두번째 90° pulse 이후 두 조직의 transversal magnetization 크기는 모두 같을 것이다.
 
@@ -90,7 +90,7 @@ A와 B 조직이 있다고 하자. A가 B에 비해 짧은 T1, T2를 가지고 �
 
 
 
-#### Proton density weighted image
+### Proton density weighted image
 
 TR을 짧게 하면 두 조직 간의 차이를 더 잘 볼 수 있는, 그 중에서도 T1이 짧은 조직을 더 잘 볼 수 있는 사진을 찍을 수 있다고 했다. 그런데 TR을 매우 길게 해서 T1이 더 이상 조직에 영향을 주지 않는 상황이어도 두 조직의 signal intensity에는 차이가 있다. 바로 proton density 때문이다. 그래서 TR을 길게 해서 찍는 사진은 **proton density weighted image**라고 한다.
 
@@ -100,7 +100,7 @@ TR을 짧게 하면 두 조직 간의 차이를 더 잘 볼 수 있는, 그 중�
 
 
 
-#### T2-weighted image
+### T2-weighted image
 
 T1을 활용해서 T1이 짧은 조직을 더 잘 볼 수 있게 하는 이미지를 찍을 수 있다면, T2를 활용해서 T2가 긴 조직을 볼 수 있지 않을까?(왜냐하면 T1은 시간이 갈수록 신호가 증가하는 반면 T2는 시간이 갈수록 신호가 감소하기 때문에, T2가 길수록 측정되는 신호는 크다)
 
@@ -124,7 +124,7 @@ T2-weighted image의 특성을 보자면, 짧은 TE를 쓸 경우 조직들 간�
 
 
 
-### 정리: Spin echo pulse sequence
+## 정리: Spin echo pulse sequence
 
 지금까지 말한 내용을 정리해서 MRI에서 전자기파를 쏘고 그 신호를 받는 과정을 요약하자면 다음과 같다.
 
@@ -134,7 +134,7 @@ T2-weighted image의 특성을 보자면, 짧은 TE를 쓸 경우 조직들 간�
 
 
 
-### TR과 TE의 길이에 따라 달라지는 이미지
+## TR과 TE의 길이에 따라 달라지는 이미지
 
 ![](https://github.com/karl6885/karl6885.github.io/blob/master/assets/images/posts/MRI_made_easy/MRI_made_easy_021.png?raw=true)
 
@@ -184,7 +184,7 @@ T2-weighted image에서는 CSF가 가장 밝은색이다.
 
 
 
-## Fast imaging sequences(Short TR)
+# Fast imaging sequences(Short TR)
 
 일반적인 MRI imaging sequences는 시간이 좀 걸린다. 뇌의 경우 20~45분, 흉부의 경우 25~45분까지. 따라서 제한된 수의 환자만 촬영이 가능하고, 환자들도 그 긴 시간 동안 조금씩 움직이기 때문에 문제가 발생한다. 따라서 이러한 문제를 해결하기 위해 fast imaging sequences가 필요하다. 
 
@@ -222,7 +222,7 @@ MRI imaging sequences에서 TR은 가장 시간을 많이 잡아먹는 존재다
 - 작은 flip angle을 쓰기 때문에 언제나 충분한 longitudinal magnetization이 존재한다. 따라서 이것의 회복을 위한 긴 TR을 쓰지 않아도 된다.
 - 쏘는 데 시간이 좀 걸리는 180° pulse를 쓰지 않는다.
 
-### Fast imgaing time
+## Fast imgaing time
 
 Fast imaging sequences보다 짧게 이미징 시간을 줄일 수 있는 방법은 없을까? 대체 무엇이 이미징 시간을 결정하는 걸까? 일반적인 이미징 시간은 다음과 같이 구할 수 있다.
 
@@ -230,7 +230,7 @@ Fast imaging sequences보다 짧게 이미징 시간을 줄일 수 있는 방법
 
 N은 찍는 사진의 수이고, N_ex는 하나의 사진을 완성시킬 때까지 필요한 여러 번의 촬영 횟수이다. 사실 fast imaging에서 나오는 신호는 다소 작다. 따라서 좋은 퀄리티의 사진을 위해 여러 번 사진을 찍고 그것의 평균을 구하는 것이 좋다. 결국, 우리가 원하는 것은 신호 대비 노이즈가 적은 사진이다.
 
-### Multi-slice imaging(Long TR)
+## Multi-slice imaging(Long TR)
 
 만약 추가적인 신호 측정을 위해 긴 TR을 사용한다면 그만큼 이미징 시간도 증가한다. 그러나, 긴 TR을 사용하면서도 이미징 시간을 줄일 수 있는 방법이 존재한다.
 

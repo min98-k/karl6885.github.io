@@ -8,8 +8,6 @@ tags: [MRI, Neuroscience, Medical Imaging, Neuroimaging, MRI made easy, Introduc
 
 
 
-# MRI 쉽게 이해하기 (1) 개요
-
 의료영상 중 가장 대표적인 MRI에 대해 쉽게 이해해보는 글. 
 
 고등학교 과정에서 물리를 배운 적이 없던 문과도 이해할 수 있도록 쉽게 풀어 써 보았다.
@@ -22,7 +20,7 @@ MRI made easy라는 원서를 정리하였으며, 필요에 따라 내용을 가
 
 
 
-## MRI
+# MRI
 
 MRI의 작동 순서를 정말 간단하게 정리하자면 다음과 같다.
 
@@ -100,7 +98,7 @@ W는 precession의 주기(단위는 Hz 또는 MHz), B는 외부 자기장의 세
 
 
 
-### Longitudinal magnetization
+## Longitudinal magnetization
 
 앞으로의 설명을 좀 더 편하게 하기 위해, 좌표계를 쓰기로 한다.(매번 proton과 자석 하나하나를 다 그릴 수 없으니..)사실 proton은 direction과 magnitude를 모두 가지고 있으니 vector로 표현하기 더 편하다. *이제부터 proton들은 화살표로 표현한다.*
 

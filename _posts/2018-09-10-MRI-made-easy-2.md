@@ -8,11 +8,11 @@ tags: [MRI, Neuroscience, Medical Imaging, Neuroimaging, MRI made easy, Introduc
 
 
 
-# MRI 쉽게 이해하기 (2) 전자기파를 쏘고 끄기
+이번 글에서는 환자를 자석 속에 넣은 상태에서 **전자기파를 쏠 때와 끌 때** 발생하는 현상에 대해 알아본다.
 
 
 
-## MRI
+# MRI
 
 MRI의 작동 순서를 정말 간단하게 정리하자면 다음과 같다.
 
@@ -24,11 +24,9 @@ MRI의 작동 순서를 정말 간단하게 정리하자면 다음과 같다.
 
 
 
-이번 글에서는 환자를 자석 속에 넣은 상태에서 **전자기파를 쏠 때와 끌 때** 발생하는 현상에 대해 알아본다.
 
 
-
-## 전자기파를 쏴 보자
+# 전자기파를 쏴 보자
 
 MRI의 두번째 단계인 '전자기파를 쏜다'에 대해 한 번 얘기해보도록 하자. 
 
@@ -55,7 +53,7 @@ proton의 precession 주기를 알기 위해서는 Larmor equation을 쓴다고 
 
 
 
-## 전자기파를 꺼 보자
+# 전자기파를 꺼 보자
 
 자, MRI에 사람을 집어넣고 전자기파도 쏴 봤으니, 이제 세 번째 차례인 '전자기파를 끈다'를 해 볼 시간이다. 
 
@@ -63,7 +61,7 @@ proton의 precession 주기를 알기 위해서는 Larmor equation을 쓴다고 
 
 
 
-### T1
+## T1
 
 Longitudinal magnetization이 다시 증가하는 현상은 longitudinal relaxation 또는 spin-lattice-relaxation이라고 한다. 흡수했던 에너지를 열에너지의 형태로 lattice라 불리는, 주변의 환경에 넘겨주기 때문이다. 또 이 현상은 줄여서 T1이라고도 한다. 아래는 이 현상을 그래프로 나타낸 T1-curve이다.
 
@@ -71,13 +69,15 @@ Longitudinal magnetization이 다시 증가하는 현상은 longitudinal relaxat
 
 
 
-### T2
+## T2
 
 Transversal magnetization이 감소하는 현상은 transversal relaxation 또는 spin-spin-relaxation이라고 한다. 줄여서는 T2라고 한다. T2 현상을 그래프로 나타낸 T2-curve는 다음과 같다.
 
 ![](https://github.com/karl6885/karl6885.github.io/blob/master/assets/images/posts/MRI_made_easy/MRI_made_easy_007.png?raw=true)
 
-### T1-T2 비교
+
+
+## T1-T2 비교
 
 T2 현상에 대해 조금만 더 자세히 알아보자. 사실 proton들의 precession 주기는 굉장히 빠르다. 예를 들어, p1이 10Mhz고 p2가 그보다 1% 빠른 10.1Mhz라고 해보자. p2는 5ms만에 중심축을 50.5번 돈다. p2는 50번 도는데 말이다. 이렇게 조금의 주기 차이가 순식간에 각 proton을 반대편으로 보내버린다. 따라서 proton들이 precession에 따라 다시 제각기로 돌아가는 시간은 짧은 편이고, transversal magnetization도 그에 따라 빠르게 감소한다. 
 
