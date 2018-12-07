@@ -2,7 +2,7 @@
 layout: post
 title: "Keras의 Autoencoder를 활용해 신용카드 이상 거래 탐지하기"
 date: 2018-10-24
-categories: Deep Learning
+categories: Deep_Learning
 tags: [tutorial, Keras, deep learning, anomaly detection, autoencoder, fraud detection, ROC curve]
 
 ---
